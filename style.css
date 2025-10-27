@@ -26,6 +26,10 @@ h1 {
     letter-spacing: 1px;
 }
 
+p.page h3 {
+    display: inline;
+}
+
 #screens {
     display: grid;          /* disposition en ligne */
     justify-content: center;/* centre les éléments horizontalement */
