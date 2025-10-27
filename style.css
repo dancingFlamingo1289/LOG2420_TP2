@@ -73,6 +73,9 @@ p.page h3 {
 }
 
 /* --- TEXTE DE CHAQUE ÉCRAN --- */
+div.hidden {
+    display: none;
+}
 .screen p {
     margin: 0;
     padding: 15px 20px;
