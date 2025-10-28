@@ -12,20 +12,22 @@ document.querySelectorAll('.screen img').forEach(img => {
 
 // Ferme la modale quand on clique sur le bouton ✕
 closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    overlayImg.src = '';
+    closeImage()
 });
 
 // Ferme la modale quand on clique sur l'image elle-même
 overlayImg.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    overlayImg.src = '';
+    closeImage();
 });
 
 // Ferme si on clique sur le fond noir
 overlay.addEventListener('click', e => {
     if (e.target === overlay) { // éviter de fermer si on clique sur l'image
-        overlay.style.display = 'none';
-        overlayImg.src = '';
+        closeImage();
     }
 });
+
+function closeImage() {
+    overlay.style.display = 'none';
+    overlayImg.src = '';
+}
