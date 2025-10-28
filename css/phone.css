@@ -1,0 +1,71 @@
+/* === Mode téléphone (écrans jusqu’à 768px) === */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    /* Les écrans s'affichent en colonne */
+    #screens {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 seule colonne */
+        gap: 20px;                  /* espace entre chaque écran */
+        justify-items: center;      /* centre les écrans horizontalement */
+        margin-top: 10px;
+    }
+
+    .screen {
+        width: 100%;                /* chaque écran prend toute la largeur dispo */
+        max-width: 500px;           /* limite pour éviter que ce soit trop large */
+        border-radius: 10px;
+        box-shadow: 0 3px 10px var(--shadow-color);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .screen:hover {
+        transform: none;            /* désactive le "saut" au survol (inutile sur mobile) */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .screen img {
+        width: 100%;
+        height: auto;
+    }
+
+    .task-label {
+        font-size: 0.95em;
+        padding: 6px 0;
+    }
+
+    .screen h2 {
+        font-size: 1.1em;
+    }
+
+    .explications {
+        font-size: 0.9em;
+        padding: 10px 15px 15px;
+    }
+
+    footer {
+        padding: 25px 10px;
+        font-size: 0.9em;
+    }
+
+    #overlay-img {
+        max-width: 95vw;
+        max-height: 70vh;
+    }
+
+    #close-btn {
+        top: -30px;
+        right: -30px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
