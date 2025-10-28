@@ -76,6 +76,37 @@ p.page h3 {
 div.hidden {
     display: none;
 }
+
+span.note {
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #555;
+    background-color: rgba(255, 255, 0, 0.15); /* léger fond jaune pour attirer l’attention */
+    border-left: 3px solid var(--accent-color);
+    padding: 4px 8px;
+    margin: 4px 0;
+    border-radius: 6px;
+}
+
+span.note a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task-label {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-title);
+    padding: 8px 0;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 12px 12px 0 0;
+    letter-spacing: 0.5px;
+}
+
 .screen p {
     margin: 0;
     padding: 15px 20px;
@@ -169,4 +200,33 @@ div.hidden {
 @keyframes zoomIn {
     from { transform: scale(0.9); opacity: 0.5; }
     to { transform: scale(1); opacity: 1; }
+}
+
+/* === Footer === */
+footer {
+    background-color: #111; /* noir profond mais pas pur */
+    color: #f4f6f8;         /* texte clair */
+    font-family: var(--font-body);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid var(--accent-color);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+    color: #64b5f6; /* bleu plus clair au survol */
+    transform: scale(1.05);
 }
