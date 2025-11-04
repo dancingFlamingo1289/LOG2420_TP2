@@ -1,0 +1,151 @@
+/* === STYLE GÉNÉRAL === */
+body {
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    background-color: #f4f6f8; /* fond doux */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #222;
+}
+
+/* === TITRE PRINCIPAL === */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2em;
+    color: #1e88e5;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* === CONTENEUR PRINCIPAL === */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+#tp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    width: 90%;
+    max-width: 900px;
+    justify-items: center;
+}
+
+/* === CARTES PRINCIPALES === */
+.tp-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeSlideIn 0.6s ease both;
+}
+
+.tp-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === BANDEAU SUPÉRIEUR === */
+.tp-header {
+    background: linear-gradient(135deg, #1e88e5, #64b5f6);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 15px 0;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+}
+
+/* === ICÔNE === */
+.tp-icon {
+    font-size: 60px;
+    margin: 30px 0 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    color: #1e88e5;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.tp-card:hover .tp-icon {
+    transform: rotate(6deg) scale(1.15);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+/* === TEXTE === */
+.tp-card p {
+    font-size: 0.95em;
+    color: #333;
+    padding: 0 20px 30px;
+    line-height: 1.5;
+}
+
+/* === ANIMATION D’APPARITION === */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === PIED DE PAGE === */
+footer {
+    margin-top: auto;
+    background-color: #111;
+    color: #f4f6f8;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #1e88e5;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+    color: #64b5f6;
+    transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+        margin-top: 30px;
+    }
+    #tp-grid {
+        gap: 25px;
+    }
+    .tp-icon {
+        font-size: 50px;
+    }
+}

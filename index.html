@@ -1,134 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Scénarimage de Curriculum Analitica</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/print.css" media="print">
-        <link rel="stylesheet" href="./css/phone.css" media="(max-width: 768px)">
-        <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px) and (max-width: 1024px)">
-    </head>
-    <body>
-        <h1>Scénarimage de l'application Curriculum Analitica</h1>
-        <div id="screens">
-            <div class="screen">
-                <div class="task-label">Tâche initiale pour accéder à CA</div>
-                <img src="./assets/step1.png" alt="step 1" onerror="this.src='./assets/placeholder.png'; this.onerror=null;">
-                <div>
-                    <h2>Étape 1</h2>
-                    <p class="page">
-                        <h3>Page : </h3> Page de connexion.
-                    </p>
-                    <p class="action">
-                        <h3>Action : </h3>
-                        Saisie des identifiants de Polytechnique du Dr. Alain Fournier. Clic sur le bouton "Se connecter".
-                    </p>
-                </div>
-            </div>
-            <div class="screen">
-                <div class="task-label">Tâche #1</div>
-                <img src="./assets/step2.png" alt="step 2" onerror="this.src='./assets/placeholder.png'; this.onerror=null;">
-                <div>
-                    <h2>Étape 2</h2>
-                    <p class="page">
-                        <h3>Page : </h3> Tableau de bord.
-                    </p>
-                    <p class="action">
-                        <h3>Action : </h3>
-                        Tableau de bord -> Alertes de Chevauchement Principaux -> Alerte 1. Clic sur le bouton "Voir la paire".
-                    </p>
-                </div>
-            </div>
-            <div class="screen">
-                <div class="task-label">Tâche #1 & Tâche #2</div>
-                <img src="./assets/step3.png" alt="step 3" onerror="this.src='./assets/placeholder.png'; this.onerror=null;">
-                <div>
-                    <h2>Étape 3</h2>
-                    <p class="page">
-                        <h3>Page : </h3>
-                        Tableau de bord -> Alertes de Chevauchement Principaux -> Alerte 1 -> Programme : Génie mécanique - Détails du chevauchement.
-                    </p>
-                    <p class="action">
-                        <h3>Action : </h3>
-                        Clic sur le lien "Systèmes de poutres".
-                    </p>
-                </div>
-            </div>
-            <div class="screen">
-                <div class="task-label">Tâche #2</div>
-                <img src="./assets/step4.png" alt="step 4" onerror="this.src='./assets/placeholder.png'; this.onerror=null;">
-                <span class="note">
-                    Note : Les descriptions des plans de cours ont été générées par l'IA étant donné que les cours de Polytechnique
-                    <a href="https://www.polymtl.ca/programmes/cours/resistance-des-materiaux-ii" target="_blank">MEC-2405</a> et 
-                    <a href="https://www.polymtl.ca/programmes/cours/recherche/MEC3420?" target="_blank">MEC-3420</a> ne contiennent pas les concepts-clefs abordés dans le document CAI.
-                    La conversation avec Gemini peut être retrouvée <a href="https://gemini.google.com/app/b012d74ed7f1a152" target="_blank">ici</a>.
-                </span>
-                <div>
-                    <h2>Étape 4</h2>
-                    <p class="page">
-                        <h3>Page : </h3>
-                        <span>Tableau de bord -> Alertes de Chevauchement Principaux -> Alerte 1 -> 
-                            Programme : Génie mécanique - Détails du chevauchement -> 
-                            Programme : Génie mécanique - Détails du chevauchement - Extraits de plan de cours.</span>
-                    </p>
-                    <p class="action">
-                        <h3>Action : </h3>
-                        Clic sur le bouton "Modéliser l'optimisation".
-                    </p>
-                </div>
-            </div>
-            <div class="screen">
-                <div class="task-label">Tâche #3</div>
-                <img src="./assets/step5.png" alt="step 5" onerror="this.src='./assets/placeholder.png'; this.onerror=null;">
-                <div>
-                    <h2>Étape 5</h2>
-                    <p class="page">
-                        <h3>Page : </h3>
-                        <span>
-                            Tableau de bord -> Alertes de Chevauchement Principaux -> Alerte 1 -> 
-                            Programme : Génie mécanique - Détails du chevauchement -> 
-                            Programme : Génie mécanique - Détails du chevauchement - Extraits de plan de cours
-                            -> Modélisation de la refonte.
-                        </span>
-                    </p>
-                    <p class="action">
-                        <h3>Action : </h3>
-                        Clic sur le bouton "Modifier le scénario".
-                    </p>
-                </div>
-            </div>
-            <div class="screen">
-                <div class="task-label">Tâche #3</div>
-                <img src="./assets/step6.png" alt="step 6" onerror="this.src='./assets/placeholder.png'; this.onerror=null;">
-                <div>
-                    <h2>Étape 6</h2>
-                    <p class="page">
-                        <h3>Page : </h3>
-                        Tableau de bord -> Alertes de Chevauchement Principaux -> Alerte 1 -> 
-                        Programme : Génie mécanique - Détails du chevauchement -> 
-                        Programme : Génie mécanique - Détails du chevauchement - Extraits de plan de cours ->
-                        Modélisation de la refonte. -> Rappot généré avec succès.
-                    </p>
-                    <p class="action">
-                        <h3>Action : </h3>
-                        Clic sur le bouton "Envoyer par courriel".
-                    </p>
-                </div>
-            </div>
-        </div>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurriculumAnalitica — Accueil</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/print.css" media="print">
+    <link rel="stylesheet" href="./css/phone.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px) and (max-width: 1024px)">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li class="active"><a href="index.html">Accueil</a></li>
+                <li class=""><a href="./tp2.html">TP2</a></li>
+                <li class=""><a href="./tp3.html">TP3</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <footer>
-            <p>Scénarimage fait dans le cadre du TP2 pour l'application Curriculum Analitica du cours 
-                <a href="https://www.polymtl.ca/programmes/cours/anal-et-conc-des-interfaces-utilisateurs" target="_blank">LOG2420 à Polytechnique Montréal</a> - A2025.</p>
-            <p>&copy; Kassas Elias, Benaiche Djihed, Abderrahim Leith Ethan, Cipcigan Raul</p>
-        </footer>
+    <h1>CurriculumAnalitica — Scénarimages</h1>
+    
+    <main>
+        <section id="tp-grid">
+            <!-- === TP2 === -->
+            <a href="./tp2.html" class="tp-card">
+                <div class="tp-header">TP2</div>
+                <div class="tp-icon">
+                    <i class="fa-solid fa-pencil-ruler"></i>
+                </div>
+                <p>
+                    Découvrez les interfaces du TP2 — premières itérations du design, 
+                    scénarisation des tâches et interactions de base.
+                </p>
+            </a>
 
-        <!-- Fenêtre modale -->
-        <div id="overlay">
-            <div id="overlay-content">
-                <button id="close-btn">✕</button>
-                <img id="overlay-img" src="" alt="Image agrandie">
-            </div>
-        </div>
-        <script src="script.js"></script>
-    </body>
+            <!-- === TP3 === -->
+            <a href="./tp3.html" class="tp-card">
+                <div class="tp-header">TP3</div>
+                <div class="tp-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <p>
+                    Explorez les scénarimages du TP3 — enrichissement des fonctionnalités, 
+                    amélioration de l’expérience utilisateur et design adaptatif.
+                </p>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Scénarimage fait dans le cadre du TP2 pour l'application Curriculum Analitica du cours 
+            <a href="https://www.polymtl.ca/programmes/cours/anal-et-conc-des-interfaces-utilisateurs" 
+                target="_blank">LOG2420 à Polytechnique Montréal</a> - A2025.</p>
+        <p>&copy; Kassas Elias, Benaiche Djihed, Abderrahim Leith Ethan, Cipcigan Raul</p>
+        <p>Dernière mise à jour : 4 novembre 2025</p>
+    </footer>
+</body>
 </html>
