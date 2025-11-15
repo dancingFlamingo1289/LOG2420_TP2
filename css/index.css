@@ -108,11 +108,11 @@ main {
 
 /* === PIED DE PAGE === */
 footer {
-    margin-top: auto;
+    /* margin-top: auto; */
     background-color: #111;
     color: #f4f6f8;
     font-family: 'Segoe UI', sans-serif;
-    padding: 30px 20px;
+    /*padding: 30px 20px;*/
     text-align: center;
     border-top: 3px solid #1e88e5;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
