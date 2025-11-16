@@ -1,62 +1,64 @@
 /* Menu général */
 header {
     width: 100%;
-    /* Application du Glassmorphism sombre pour la nav */
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre semi-transparent */
+    /* Conserve le style Glassmorphism */
+    background-color: rgba(0, 0, 0, 0.6); 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     top: 0;
     left: 0;
     z-index: 100;
-    /* Ombre subtile et large (Glassmorphism) */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
 }
 
 .main-nav {
-    position: relative;
-    height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 30px;
+    gap: 40px;
+    position: relative;
 }
 
-nav img#logo {
-    width: 145px;
-    height: auto;
-    flex-shrink: 0;
-    padding-left: 20px; /* Ajout d'un petit padding pour l'esthétique */
+/* Logo (Garder le positionnement absolu pour le détacher du flux si besoin) */
+.main-nav #logo {
+    height: 100px;
+    width: auto;
+    position: static; 
+    margin-right: auto; /* Pousse les liens à droite */
 }
 
+/* Liens du menu */
 .main-nav ul {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Augmentation du gap */
     list-style: none;
+    display: flex;
+    gap: 32px;
     margin: 0;
-    padding: 10px 20px;
+    padding: 0;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: #f5f5f5; /* Texte clair */
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
-    padding: 6px 10px;
+    color: var(--color-text-light);
+    padding: 8px 12px;
     border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s ease;
     position: relative;
 }
 
 .main-nav a:hover {
-    color: #ffc107; /* Jaune ambre */
-    transform: none; /* Supprime le translateY pour le Glassmorphism */
+    color: var(--color-primary); /* Accent jaune */
 }
 
-/* Lien actif (Style Glassmorphism Ambre) */
-.main-nav .active a {
-    color: #ffc107; /* Jaune ambre */
+.main-nav li.active a {
+    color: var(--color-primary); /* Accent jaune */
     font-weight: 600;
     /* Soulignement lumineux */
-    box-shadow: 0 2px 0 0 #ffc107; 
+    box-shadow: 0 2px 0 0 var(--color-primary); 
     padding-bottom: 6px; 
     border-radius: 0;
 }

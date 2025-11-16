@@ -1,21 +1,53 @@
+/* print.css - DENSITÉ MAXIMALE D'ÉCRANS PAR PAGE (3 Colonnes) */
 @media print {
-    body {
-        -webkit-print-color-adjust: exact; /* Chrome, Safari */
-        print-color-adjust: exact;         /* Firefox, spec standard */
+    .main-nav #logo {
+        height: 30px; /* Réduit la taille du logo */
+        width: auto;
+        margin-right: 15px;
+        /* filter: grayscale(100%) ; Logo en noir et blanc */
+    }
+    
+    /* --- Styles du Contenu : Monochrome & Dense --- */
+    h1 {
+        font-size: 1.2em; 
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .tp-card, .screen {
+        box-shadow: none;
+        padding: 5px;
+        border-radius: 0;
+        page-break-inside: avoid;
+    }
+    
+    .tp-header, .screen h2 {
+        font-size: 1em ; 
+        font-weight: bold;
+        text-decoration: underline;
+        margin: 2px 0;
     }
 
-    #overlay,
-    #close-btn {
-        display: none !important;
+    .tp-card p, .explications {
+        font-size: 7pt !important;
+        line-height: 1.1 ;
+        margin: 1px 0 ;
+    }
+    
+    span.note {
+        padding: 2px 4px !important;
+        margin: 2px 0 ;
     }
 
-    /* --- Grille d’impression à 3 colonnes --- */
+    /* --- Grille d’impression à 3 colonnes */
+    #tp-grid,
     #screens {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important; /* petit espace entre les cartes */
-        margin: 0 auto;
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 20px;
         width: 100%;
+        margin: 0 auto;
         box-sizing: border-box;
         page-break-inside: auto;
     }
@@ -23,6 +55,6 @@
     /* --- Ajustement de la taille de page --- */
     @page {
         size: A4 portrait;
-        margin: 0.5cm;
+        margin: 0.8cm ;
     }
 }

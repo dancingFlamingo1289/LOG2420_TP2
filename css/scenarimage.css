@@ -3,7 +3,7 @@
 /* ---------------------------------------------------- */
 :root {
     /* Variables GLASSMORPHISM (Synchronisées avec index.css) */
-    --color-primary: #ffc107;                      /* Jaune Ambre Vif (l'accent) */
+    --color-primary: #ffc107;                      /*Jaune Ambre Vif (l'accent)*/
     --color-primary-hover: #ff9800;                
     --color-glass-base: rgba(255, 255, 255, 0.2);
     --color-glass-border: rgba(255, 255, 255, 0.5);
@@ -13,11 +13,11 @@
     --shadow-glass: 0 10px 30px rgba(0, 0, 0, 0.4);
 
     /* Variables de contenu */
-    --card-background: var(--color-glass-base);    /* Le fond des cartes est la base du verre */
-    --accent-color: var(--color-primary);          /* L'accent est le Jaune */
+    --card-background: var(--color-glass-base);    /*Le fond des cartes est la base du verre*/
+    --accent-color: var(--color-primary);          /*L'accent est le Jaune*/
     --border-color: var(--color-glass-border);
-    --text-color-light: #f5f5f5;                   /* Pour le texte clair sur verre */
-    --text-color-subtle: #d1d9e0;                  /* Texte gris clair */
+    --text-color-light: #f5f5f5;                   /*Pour le texte clair sur verre*/
+    --text-color-subtle: #d1d9e0;                  /*Texte gris clair*/
     --font-title: 'Poppins', sans-serif;
     --font-body: 'Segoe UI', sans-serif;
 }

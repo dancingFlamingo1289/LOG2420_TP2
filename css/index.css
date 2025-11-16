@@ -2,18 +2,24 @@
 /* 🎨 VARIABLES GLOBALES (Glassmorphism Ambre/Jaune)     */
 /* ---------------------------------------------------- */
 :root {
-    --color-primary: #ffc107;                      /* Jaune Ambre Vif (l'accent) */
-    --color-primary-hover: #ff9800;                /* Jaune Ambre plus foncé au survol */
-    --color-glass-base: rgba(255, 255, 255, 0.2);  /* Base transparente */
-    --color-glass-border: rgba(255, 255, 255, 0.5); /* Bordure lumineuse */
-    --color-text-dark: #1f2937;
-    --color-text-light: #f5f5f5;
-    --color-nav-bg: rgba(0, 0, 0, 0.6);            /* Barre de nav semi-transparente foncée */
-    /* Dégradé de fond sombre et chaud pour faire ressortir le verre */
-    --color-background-start: #3e2f07;             /* Marron/Or sombre */
-    --color-background-end: #5a4a15;               /* Marron plus doux */
-    /* Ombre subtile et large */
+    /* Variables GLASSMORPHISM (Synchronisées avec index.css) */
+    --color-primary: #ffc107;                      /*Jaune Ambre Vif (l'accent)*/
+    --color-primary-hover: #ff9800;                
+    --color-glass-base: rgba(255, 255, 255, 0.2);
+    --color-glass-border: rgba(255, 255, 255, 0.5);
+    --color-nav-bg: rgba(0, 0, 0, 0.6);            
+    --color-background-start: #3e2f07;             
+    --color-background-end: #5a4a15;               
     --shadow-glass: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    /* Variables de contenu */
+    --card-background: var(--color-glass-base);    /*Le fond des cartes est la base du verre*/
+    --accent-color: var(--color-primary);          /*L'accent est le Jaune*/
+    --border-color: var(--color-glass-border);
+    --text-color-light: #f5f5f5;                   /*Pour le texte clair sur verre*/
+    --text-color-subtle: #d1d9e0;                  /*Texte gris clair*/
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Segoe UI', sans-serif;
 }
 
 /* ---------------------------------------------------- */
@@ -68,57 +74,6 @@ header {
     box-shadow: var(--shadow-glass);
     padding: 10px 0;
     z-index: 1000;
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
-    gap: 40px;
-    position: relative;
-}
-
-/* Logo */
-.main-nav #logo {
-    height: 40px;
-    width: auto;
-    position: absolute;
-    left: 30px;
-}
-
-/* Liens du menu */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--color-text-light);
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: 0.3s ease;
-    position: relative;
-}
-
-.main-nav a:hover {
-    color: var(--color-primary); /* Accent jaune */
-}
-
-.main-nav li.active a {
-    color: var(--color-primary); /* Accent jaune */
-    font-weight: 600;
-    /* Soulignement lumineux */
-    box-shadow: 0 2px 0 0 var(--color-primary); 
-    padding-bottom: 6px; 
-    border-radius: 0;
 }
 
 /* ---------------------------------------------------- */
