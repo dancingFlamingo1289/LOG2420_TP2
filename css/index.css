@@ -1,150 +1,222 @@
-/* === STYLE GÉNÉRAL === */
+/* ---------------------------------------------------- */
+/* 🎨 VARIABLES GLOBALES (Glassmorphism Ambre/Jaune)     */
+/* ---------------------------------------------------- */
+:root {
+    --color-primary: #ffc107;                      /* Jaune Ambre Vif (l'accent) */
+    --color-primary-hover: #ff9800;                /* Jaune Ambre plus foncé au survol */
+    --color-glass-base: rgba(255, 255, 255, 0.2);  /* Base transparente */
+    --color-glass-border: rgba(255, 255, 255, 0.5); /* Bordure lumineuse */
+    --color-text-dark: #1f2937;
+    --color-text-light: #f5f5f5;
+    --color-nav-bg: rgba(0, 0, 0, 0.6);            /* Barre de nav semi-transparente foncée */
+    /* Dégradé de fond sombre et chaud pour faire ressortir le verre */
+    --color-background-start: #3e2f07;             /* Marron/Or sombre */
+    --color-background-end: #5a4a15;               /* Marron plus doux */
+    /* Ombre subtile et large */
+    --shadow-glass: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------------------------------------- */
+/*     GLOBAL & TYPOGRAPHIE                             */
+/* ---------------------------------------------------- */
 body {
-    font-family: 'Segoe UI', 'Poppins', sans-serif;
-    background-color: #f4f6f8; /* fond doux */
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    /* Nouveau Dégradé sombre et chaud */
+    background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
     margin: 0;
+    color: var(--color-text-light); /* Texte clair par défaut sur le fond sombre */
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: #222;
 }
 
-/* === TITRE PRINCIPAL === */
-h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.2em;
-    color: #1e88e5;
-    letter-spacing: 1px;
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* === CONTENEUR PRINCIPAL === */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    width: 100%;
+    flex-grow: 1;
 }
+
+/* Titre Principal */
+h1 {
+    text-align: center;
+    margin: 50px auto 40px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    letter-spacing: -0.05em;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary); /* Accent jaune */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* ---------------------------------------------------- */
+/*     HEADER & NAVIGATION (Bandeau de verre sombre)    */
+/* ---------------------------------------------------- */
+header {
+    width: 100%;
+    /* Application du Glassmorphism */
+    background-color: var(--color-nav-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: var(--shadow-glass);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    gap: 40px;
+    position: relative;
+}
+
+/* Logo */
+.main-nav #logo {
+    height: 40px;
+    width: auto;
+    position: absolute;
+    left: 30px;
+}
+
+/* Liens du menu */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: var(--color-primary); /* Accent jaune */
+}
+
+.main-nav li.active a {
+    color: var(--color-primary); /* Accent jaune */
+    font-weight: 600;
+    /* Soulignement lumineux */
+    box-shadow: 0 2px 0 0 var(--color-primary); 
+    padding-bottom: 6px; 
+    border-radius: 0;
+}
+
+/* ---------------------------------------------------- */
+/*     GRID & TP CARDS (Éléments de verre clair)        */
+/* ---------------------------------------------------- */
 
 #tp-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 35px;
-    width: 90%;
-    max-width: 900px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 30px;
 }
 
-/* === CARTES PRINCIPALES === */
 .tp-card {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 18px;
+    /* Le cœur du Glassmorphism iOS */
+    background: var(--color-glass-base);
+    backdrop-filter: blur(25px); 
+    -webkit-backdrop-filter: blur(25px);
+    /* Bordure subtile et claire pour l'effet de lumière */
+    border: 1px solid var(--color-glass-border); 
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
     text-decoration: none;
-    color: #222;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 320px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeSlideIn 0.6s ease both;
+    color: var(--color-text-light);
+    box-shadow: var(--shadow-glass);
+    
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
 }
 
 .tp-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    /* Augmentation de l'opacité au survol pour un effet de mise au point */
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
 }
 
-/* === BANDEAU SUPÉRIEUR === */
+/* Header de carte (TP2, TP3) */
 .tp-header {
-    background: linear-gradient(135deg, #1e88e5, #64b5f6);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    padding: 15px 0;
-    font-size: 1.2em;
-    letter-spacing: 0.5px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-text-light);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-/* === ICÔNE === */
+/* Icône des cartes */
 .tp-icon {
-    font-size: 60px;
-    margin: 30px 0 10px;
-    transition: transform 0.4s ease, filter 0.4s ease;
-    color: #1e88e5;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    font-size: 3rem;
+    margin: 12px 0 20px;
+    color: var(--color-primary); /* Accent jaune */
+    transition: color 0.4s ease, transform 0.4s ease;
 }
 
 .tp-card:hover .tp-icon {
-    transform: rotate(6deg) scale(1.15);
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+    transform: scale(1.1);
+    color: var(--color-primary-hover);
 }
 
-/* === TEXTE === */
+/* Texte des cartes */
 .tp-card p {
-    font-size: 0.95em;
-    color: #333;
-    padding: 0 20px 30px;
+    font-size: 1rem;
     line-height: 1.5;
+    color: var(--color-text-light);
+    opacity: 0.9;
 }
 
-/* === ANIMATION D’APPARITION === */
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* === PIED DE PAGE === */
+/* ---------------------------------------------------- */
+/*     FOOTER (Bandeau de verre sombre)                 */
+/* ---------------------------------------------------- */
 footer {
-    background-color: #111;
-    color: #f4f6f8;
-    font-family: var(--font-body);
-    padding: 40px 20px;
+    margin-top: 60px;
+    padding: 30px 20px;
+    /* Utilisation du même style que la nav */
+    background-color: var(--color-nav-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--color-text-light);
+    font-size: 0.9rem;
     text-align: center;
-    border-top: 3px solid var(--accent-color);
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer p {
-    margin: 8px 0;
-    font-size: 0.9em;
-    line-height: 1.5;
+    margin: 5px 0;
 }
 
 footer a {
-    color: #1e88e5;
+    color: var(--color-primary); /* Accent jaune */
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #64b5f6;
-    transform: scale(1.05);
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.8em;
-        margin-top: 30px;
-    }
-    #tp-grid {
-        gap: 25px;
-    }
-    .tp-icon {
-        font-size: 50px;
-    }
+    color: var(--color-primary-hover);
+    text-decoration: underline;
 }
